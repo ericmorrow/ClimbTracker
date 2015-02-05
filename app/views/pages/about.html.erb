@@ -1,0 +1,57 @@
+<div class="container">
+
+<h1>ClimbTracker</h1>
+
+  <p>You love to climb at the gym. And you want to know how much ground you've covered. And what sort of moves you did to get through the holds on the wall</p>
+
+  <h2>Track the moves on your route</h2>
+  
+  <p>Snap a photo of your route before you climb. On the photo, tap all the holds. For each hold, you can select from a list of the types of holds, with pictures. If we don't have the hold, no stress! You can draw and name and number of additional types of holds, and even select on which side the hold is positive</p>
+  
+  <h2>Track your vert</h2>
+  
+  <p>To track the vertical, add in the height of the wall in the designated field on the snapshot of the picture. The app will remember the last entered height for each subsquent picture</P>
+  
+  <h2>Ready to go home?</h2>
+  
+  <p>First, drop your email and we'll let you know when we need some folks to test the app</p>
+
+<div class="row">
+  <div class="col-sm-8 col-md-6 col-lg-4">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      </div>    
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Submit your email
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">We got your email!</h4>
+      </div>
+      <div class="modal-body">
+        We saved your email and will be in touch very soon. Expect a confirmation as well.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+  </div> 
+</div>
+
+<h2>All done!</h2>
+  <p> Click this link to head back to <%= link_to 'the home page', root_url %> </p>
+
+</div>
