@@ -1,0 +1,39 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Moves Listing</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Body movement</th>
+      <th>End spot</th>
+      <th>Climb</th>
+      <th>Move image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @moves.each do |move| %>
+      <tr>
+        <td><%= move.order %></td>
+        <td><%= move.body_movement %></td>
+        <td><%= move.end_spot %></td>
+        <td><%= move.climb_id %></td>
+        <td><%= move.move_image %></td>
+        <td><%= link_to 'Show', move %></td>
+        <td><%= link_to 'Edit', edit_move_path(move) %></td>
+        <td><%= link_to 'Destroy', move, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Move', new_move_path %>
+
+</div>

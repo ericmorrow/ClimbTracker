@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  name: MyString
+  grade: MyString
+  number_of_moves: 1
+  height: 1
+  route_image: MyString
+  comments: MyText
+
+two:
+  location: MyString
+  name: MyString
+  grade: MyString
+  number_of_moves: 1
+  height: 1
+  route_image: MyString
+  comments: MyText

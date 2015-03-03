@@ -11,10 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210014759) do
+ActiveRecord::Schema.define(version: 20150228233033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "climbs", force: :cascade do |t|
+    t.string   "location"
+    t.string   "name"
+    t.string   "grade"
+    t.integer  "number_of_moves"
+    t.integer  "height"
+    t.string   "route_image"
+    t.text     "comments"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "moves", force: :cascade do |t|
+    t.integer  "order"
+    t.string   "body_movement"
+    t.string   "end_spot"
+    t.string   "move_image"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "climb_id"
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"

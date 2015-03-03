@@ -1,0 +1,33 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @move.order %>
+</p>
+
+<p>
+  <strong>Body movement:</strong>
+  <%= @move.body_movement %>
+</p>
+
+<p>
+  <strong>End spot:</strong>
+  <%= @move.end_spot %>
+</p>
+
+<p>
+  <strong>Climb:</strong>
+  <%= @move.climb_id %>
+</p>
+
+<p>
+  <strong>Move image:</strong>
+  <%= @move.move_image %>
+</p>
+
+<%= link_to 'Edit', edit_move_path(@move) %> |
+<%= link_to 'Back', moves_path %>
+
+</div>

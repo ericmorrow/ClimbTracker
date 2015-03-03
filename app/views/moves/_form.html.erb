@@ -1,0 +1,46 @@
+<div class="container">
+
+<%= form_for(@move) do |f| %>
+  <% if @move.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@move.errors.count, "error") %> prohibited this move from being saved:</h2>
+
+      <ul>
+      <% @move.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order %><br>
+    <%= f.number_field :order %>
+  </div>
+  <div class="field">
+    <%= f.label :body_movement %><br>
+    <%= f.text_field :body_movement %>
+  </div>
+  <div class="field">
+    <%= f.label :end_spot %><br>
+    <%= f.text_field :end_spot %>
+  </div>
+  <div class="field">
+    <%= f.label :climb_id %><br>
+    <select name="...">
+      <% Climb.all.each do |climb| %>
+        <option value="<%= climb.id %>"><%= climb.name %></option>
+      <% end %>
+    </select>
+    <%= f.collection_select :climb_id, Climb.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :move_image %><br>
+    <%= f.text_field :move_image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+</div>

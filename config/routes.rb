@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :moves
+
+  resources :climbs
+
   resources :users
 
   resources :posts

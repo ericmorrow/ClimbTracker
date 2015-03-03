@@ -1,0 +1,57 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1>Climb Details</h1>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @climb.location %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @climb.name %>
+</p>
+
+<p>
+  <strong>Grade:</strong>
+  <%= @climb.grade %>
+</p>
+
+<p>
+  <strong>Number of moves:</strong>
+  <%= @climb.number_of_moves %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @climb.height %>
+</p>
+
+<p>
+  <strong>Route image:</strong>
+  <%= @climb.route_image %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @climb.comments %>
+</p>
+
+<p>
+  <strong>List of Moves:</strong>
+  <% @climb.moves.each do |move| %>
+     <h2>Move # <%= move.order %>:</h2>
+     <h4><%= move.body_movement %></h4>
+     <%= link_to "Edit This Move", edit_move_path(move) %>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_climb_path(@climb) %> |
+<%= link_to 'Back', climbs_path %>
+
+</div>
