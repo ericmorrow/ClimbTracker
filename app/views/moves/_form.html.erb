@@ -14,9 +14,18 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :order %><br>
-    <%= f.number_field :order %>
+    <%= f.label :climb_id %><br>
+    <%= f.collection_select :climb_id, Climb.all, :id, :name %>
   </div>
+
+  This will be move:
+  <%= @order_number %>
+
+  <div class="field">
+    <%= f.label :order %><br>
+    <%= f.text_field :order %>
+  </div>
+
   <div class="field">
     <%= f.label :body_movement %><br>
     <%= f.text_field :body_movement %>
@@ -24,15 +33,6 @@
   <div class="field">
     <%= f.label :end_spot %><br>
     <%= f.text_field :end_spot %>
-  </div>
-  <div class="field">
-    <%= f.label :climb_id %><br>
-    <select name="...">
-      <% Climb.all.each do |climb| %>
-        <option value="<%= climb.id %>"><%= climb.name %></option>
-      <% end %>
-    </select>
-    <%= f.collection_select :climb_id, Climb.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :move_image %><br>

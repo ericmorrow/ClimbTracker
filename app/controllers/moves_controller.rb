@@ -14,6 +14,8 @@ class MovesController < ApplicationController
 
   # GET /moves/new
   def new
+    @squeeze = Climb.find(1)
+    @order_number = @squeeze.moves.count+1
     @move = Move.new
   end
 

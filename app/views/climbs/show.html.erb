@@ -23,7 +23,7 @@
 
 <p>
   <strong>Number of moves:</strong>
-  <%= @climb.number_of_moves %>
+  <%= @climb.moves.count %>
 </p>
 
 <p>
@@ -44,14 +44,16 @@
 <p>
   <strong>List of Moves:</strong>
   <% @climb.moves.each do |move| %>
-     <h2>Move # <%= move.order %>:</h2>
-     <h4><%= move.body_movement %></h4>
+    <p></p>
+     <strong>Move # <%= move.order %>:</strong>
+     <p>Hand or Foot: <%= move.body_movement %></p>
+    <p>Type of Piece: <%= move.end_spot %></p>
      <%= link_to "Edit This Move", edit_move_path(move) %>
   <% end %>
 </p>
 
-
-<%= link_to 'Edit', edit_climb_path(@climb) %> |
-<%= link_to 'Back', climbs_path %>
+<%= link_to 'Add a move', new_move_path(@move) %> |
+<%= link_to 'Edit this climb', edit_climb_path(@climb) %> |
+<%= link_to 'Back to Index', climbs_path %>
 
 </div>

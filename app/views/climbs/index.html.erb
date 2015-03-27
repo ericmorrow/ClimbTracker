@@ -7,15 +7,13 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Climb ID</th>
-      <th>Location</th>
       <th>Name</th>
+      <th>Location</th>
       <th>Grade</th>
       <th>Number of moves</th>
       <th>Height</th>
       <th>Route image</th>
       <th>Comments</th>
-      <th>List of moves</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,15 +21,13 @@
   <tbody>
     <% @climbs.each do |climb| %>
       <tr>
-        <td><%= climb %></td>
-        <td><%= climb.location %></td>
         <td><%= link_to climb.name, climb %></td>
+        <td><%= climb.location %></td>
         <td><%= climb.grade %></td>
         <td><%= climb.number_of_moves %></td>
         <td><%= climb.height %></td>
         <td><%= climb.route_image %></td>
         <td><%= climb.comments %></td>
-        <td><%= link_to 'Moves', moves_path %></td>
         <!--
         <td><%= link_to 'Show', climb %></td>
         <td><%= link_to 'Edit', edit_climb_path(climb) %></td>
